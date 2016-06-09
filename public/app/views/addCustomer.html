@@ -1,0 +1,106 @@
+<md-toolbar>
+    <div class="md-toolbar-tools">
+        <md-button class="md-icon-button"
+                   aria-label="Menu Button"
+                   hide-gt-md
+                   ng-click="onClickMenu();">
+            <md-icon
+                    style="margin-bottom: 15px"
+                    md-svg-icon="stylesheets/images/icons/menu.svg"
+                    aria-label="Menu Icon">
+            </md-icon>
+        </md-button>
+
+        <h2>Opret kunde</h2>
+
+        <span flex></span>
+    </div>
+</md-toolbar>
+<div layout="column" ng-cloak width="100%">
+    <md-content md-theme="docs-dark" layout-gt-sm="row" layout-padding>
+        <div>
+            <md-input-container>
+                <label>Telefon nummer</label>
+                <input ng-model="user.title">
+            </md-input-container>
+            <md-input-container>
+                <label>Email</label>
+                <input ng-model="user.email" type="email">
+            </md-input-container>
+        </div>
+    </md-content>
+    <md-content layout-padding class="background noOverflow">
+        <div>
+            <form name="userForm">
+                <div layout-gt-xs="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Fornavn</label>
+                        <input ng-model="user.firstName">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Efternavn</label>
+                        <input ng-model="theMax">
+                    </md-input-container>
+                    <md-datepicker class="background" ng-model="user.submissionDate" md-placeholder="Vælg dato">
+                    </md-datepicker>
+                </div>
+                <md-input-container class="md-block">
+                    <label>Adresse</label>
+                    <input ng-model="user.address">
+                </md-input-container>
+                <md-input-container md-no-float class="md-block">
+                    <input ng-model="user.address2" placeholder="Adresse 2">
+                </md-input-container>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>By</label>
+                        <input ng-model="user.city">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Postnummer</label>
+                        <input name="postalCode" ng-model="user.postalCode" placeholder="12345"
+                               required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+                        <div ng-messages="userForm.postalCode.$error" role="alert" multiple>
+                            <div ng-message="required" class="my-message">You must supply a postal code.</div>
+                            <div ng-message="pattern" class="my-message">That doesn't look like a valid postal
+                                code.
+                            </div>
+                            <div ng-message="md-maxlength" class="my-message">
+                                Don't use the long version silly...we don't need to be that specific...
+                            </div>
+                        </div>
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Infomation</label>
+                        <textarea ng-model="user.biography" md-maxlength="2000" rows="5" md-select-on-focus></textarea>
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <i class="fa fa-child fa-2x" style="margin-top: 5px" aria-hidden="true"></i>
+                    <md-button class="md-fab md-mini md-primary" aria-label="Use Android" ng-click="appendChildEntry()">
+                        <md-icon md-svg-src="stylesheets/images/icons/add.svg"></md-icon>
+                    </md-button>
+                </div>
+                <div layout-gt-sm="row" ng-repeat="childrenEntry in childrenArr">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Navn</label>
+                        <input>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Alder</label>
+                        <input type="number">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Info</label>
+                        <input>
+                    </md-input-container>
+                    <md-input-container>
+                        <i class="fa fa-trash fa-2x" aria-hidden="true"></i>
+                    </md-input-container>
+                </div>
+            </form>
+        </div>
+    </md-content>
+</div>

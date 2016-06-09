@@ -1,0 +1,76 @@
+.datepickerdemoBasicUsage {
+    /** Demo styles for mdCalendar. */ }
+.datepickerdemoBasicUsage md-content {
+    padding-bottom: 200px; }
+.datepickerdemoBasicUsage .validation-messages {
+    font-size: 12px;
+    color: #dd2c00;
+    margin: 10px 0 0 25px; }
+.toolbardemoBasicUsage md-toolbar md-icon.md-default-theme {
+    color: white; }
+.md-button.md-icon-button {
+    margin: 0 0.6rem;
+    height: 4.8rem;
+    min-width: 0;
+    line-height: 4.8rem;
+    padding-left: 0;
+    padding-right: 0;
+    width: 4.8rem;
+}
+.inputdemoBasicUsage .md-datepicker-button {
+    width: 36px; }
+
+body {
+    background-color: rgba(250,250,250,1);
+    overflow:hidden;
+}
+
+.background {
+    background-color: rgba(250,250,250,1);
+}
+
+.md-button {
+    padding: 0 6px 0 6px;
+    margin: 6px 8px 6px 8px;
+    min-width: 88px;
+    border-radius: 3px;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration:none;
+    border: none;
+    outline: none;
+}
+
+body,
+body > div {
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+body > div {
+    height: 100%;
+}
+
+.nav-header {
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.nav-header h1,
+.nav-header h4 {
+    color: white;
+    text-align: center;
+}
+
+.nav-header a.logo {
+    text-decoration: none;
+}
+
+.noOverflow {
+    overflow-x: hidden;
+}
+
+.carddemoBasicUsage .card-media {
+    background-color: #999999; }
