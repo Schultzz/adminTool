@@ -66,14 +66,10 @@ angular.module('app', [
         });
 
         $stateProvider.state({
-            name: 'common.link3',
-            url: '/link3',
-            templateUrl: 'app/views/default.html',
-            controller: function ($scope) {
-                $scope.model = {
-                    title: 'Hello Link 3'
-                };
-            }
+            name: 'common.signature',
+            url: '/signature',
+            templateUrl: 'app/views/signature.html',
+            controller: 'SignatureCtrl'
         });
 
 
@@ -93,6 +89,11 @@ angular.module('app', [
                 id: 'link_2',
                 name: 'Opret kunde',
                 state: 'common.createCust',
+                type: 'link'
+            }, {
+                id: 'link_4',
+                name: 'Underskriv',
+                state: 'common.signature',
                 type: 'link'
             }
         ]);
